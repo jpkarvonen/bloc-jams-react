@@ -4,14 +4,14 @@ class PlayerBar extends Component {
   render() {
     return (
       <section className="player-bar">
-        <section id="buttons">
-         <button id="previous" onClick={this.props.handlePrevClick}>
+        <section className="btn-group btn group-lg">
+         <button id="previous" className ="btn btn-primary" onClick={this.props.handlePrevClick}>
            <span className="ion-skip-backward"></span>
          </button>
-         <button id="play-pause" onClick={this.props.handleSongClick} >
+         <button id="play-pause" className ="btn btn-primary" onClick={this.props.handleSongClick} >
            <span className={this.props.isPlaying ? 'ion-pause' : 'ion-play'}></span>
          </button>
-         <button id="next" onClick={this.props.handleNextClick}>
+         <button id="next" className ="btn btn-primary" onClick={this.props.handleNextClick}>
            <span className="ion-skip-forward"></span>
          </button>
        </section>
@@ -26,10 +26,9 @@ class PlayerBar extends Component {
           step="0.01"
           onChange={this.props.handleTimeChange}
          />
-         <div className="total-time">{this.props.durationFormatted}</div>
+         <div className="total-time">{this.props.durationFormatted} </div>
        </section>
        <section id="volume-control">
-         <div className="icon ion-volume-low"></div>
          <input
           type="range"
           className="seek-bar"
@@ -39,7 +38,7 @@ class PlayerBar extends Component {
           step=".01"
           onChange={this.props.handleVolumeChange}
          />
-         <div className="icon ion-volume-high"></div>
+         <div className={this.props.volume >= 0.5 ? "icon ion-volume-high" : this.props.volume  >= 0.1 ? "icon ion-volume-low" : "icon ion-volume-mute"}></div>
        </section>
       </section>
     );

@@ -1,0 +1,12 @@
+#album-cover-art {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.library {
+
+}

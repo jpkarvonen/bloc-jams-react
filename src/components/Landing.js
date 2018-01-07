@@ -1,20 +1,17 @@
 import React from 'react';
+import './Landing.css';
 
 const Landing = () => (
   <section className="landing">
-    <h1 className="hero-title">Turn the music up!</h1>
+    <h1 className="hero-title">Turn the music up (but be mindful of your neighbors)!</h1>
     <section className="selling-points">
       <div className="point">
-        <h2 className="point-title">Choose your music</h2>
-        <p className="point-description">The world is full of music; why should you have to listen to music that someone else chose?</p>
-      </div>
-      <div className="point">
-        <h2 className="point-title">Unlimited, streaming, ad-free</h2>
-        <p className="point-description">No arbitrary limits. No distractions.</p>
+        <h2 className="point-title">Featuring TWO whole albums!!!</h2>
+        <p className="point-description">No arbitrary limits. No distractions. Just Two Albums.</p>
       </div>
       <div className="point">
         <h2 className="point-title">Mobile enabled</h2>
-        <p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
+        <p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms so you can drown out the world wherever you go.</p>
       </div>
     </section>
   </section>

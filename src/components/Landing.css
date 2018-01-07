@@ -1,0 +1,10 @@
+.landing {
+  font-family: 'Amaranth', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 1rem;
+}

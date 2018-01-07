@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
+import './PlayerBar.css';
 
 class PlayerBar extends Component {
   render() {
     return (
       <section className="player-bar">
-        <section className="btn-group btn group-lg">
-         <button id="previous" className ="btn btn-primary" onClick={this.props.handlePrevClick}>
+
+        <section id="buttons">
+         <button id="previous" onClick={this.props.handlePrevClick}>
            <span className="ion-skip-backward"></span>
          </button>
-         <button id="play-pause" className ="btn btn-primary" onClick={this.props.handleSongClick} >
+         <button id="play-pause" onClick={this.props.handleSongClick} >
            <span className={this.props.isPlaying ? 'ion-pause' : 'ion-play'}></span>
          </button>
-         <button id="next" className ="btn btn-primary" onClick={this.props.handleNextClick}>
+         <button id="next" onClick={this.props.handleNextClick}>
            <span className="ion-skip-forward"></span>
          </button>
        </section>
+
        <section id="time-control">
          <div className="current-time">{this.props.currentTimeFormatted}</div>
          <input
@@ -28,6 +31,7 @@ class PlayerBar extends Component {
          />
          <div className="total-time">{this.props.durationFormatted} </div>
        </section>
+
        <section id="volume-control">
          <input
           type="range"
@@ -40,6 +44,7 @@ class PlayerBar extends Component {
          />
          <div className={this.props.volume >= 0.5 ? "icon ion-volume-high" : this.props.volume  >= 0.1 ? "icon ion-volume-low" : "icon ion-volume-mute"}></div>
        </section>
+
       </section>
     );
   }

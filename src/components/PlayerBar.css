@@ -1,4 +1,3 @@
-/*
 .player-bar {
   background: hsla(0, 0%, 0%, 0.1);
   bottom: 0;
@@ -6,7 +5,7 @@
   position: fixed;
   width: 100%;
 }
-*/
+
 
 #buttons {
   width: 300px;
@@ -65,13 +64,13 @@
 
 #volume-control div {
   font-size: 0.9rem;
-  width: 20px;
+  width: auto;
 }
 
 
 #volume-control input {
   float: center;
-  width: calc(100% - 500px);
+  width: calc(100% - 40px);
 }
 
 input[type=range] {
@@ -79,40 +78,16 @@ input[type=range] {
   background: none;
   margin-top: 7px;
 }
-input[type=range]:focus {
-  outline: none;
-  box-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
-}
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  box-shadow: 0px 0px 0px rgba(57, 0, 0, 0), 0px 0px 0px rgba(83, 0, 0, 0);
-  background: hsl(282, 35%, 25%);
-  border-radius: 3.4px;
-  border: 0.2px solid rgba(1, 1, 1, 0);
-}
-input[type=range]::-webkit-slider-thumb {
-  border: none;
-  height: 13px;
-  width: 13px;
-  border-radius: 50%;
-  background: hsla(289, 48%, 85%, 0.5);
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -6.5px;
-}
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: hsl(282, 35%, 25%);
-}
+
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 0.8px;
   cursor: pointer;
-  background: hsl(282, 35%, 25%);
+  background: rgb(239, 57, 139);
   border-radius: 3.4px;
   border: 0.2px solid rgba(1, 1, 1, 0);
 }
+
 input[type=range]::-moz-range-thumb {
   border: 0px solid #000000;
   height: 15px;
@@ -120,40 +95,4 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50px;
   background: hsla(289, 48%, 85%, 0.5);
   cursor: pointer;
-}
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 0.8px;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-input[type=range]::-ms-fill-lower {
-  background: rgba(0, 0, 0, 0.4);
-  border: 0.2px solid rgba(1, 1, 1, 0);
-  border-radius: 6.8px;
-  box-shadow: 0px 0px 0px rgba(57, 0, 0, 0), 0px 0px 0px rgba(83, 0, 0, 0);
-}
-input[type=range]::-ms-fill-upper {
-  background: rgba(0, 0, 0, 0.4);
-  border: 0.2px solid rgba(1, 1, 1, 0);
-  border-radius: 6.8px;
-  box-shadow: 0px 0px 0px rgba(57, 0, 0, 0), 0px 0px 0px rgba(83, 0, 0, 0);
-}
-input[type=range]::-ms-thumb {
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  border: 0px solid #000000;
-  height: 15px;
-  width: 15px;
-  border-radius: 50px;
-  background: rgba(102, 103, 101, 0.79);
-  cursor: pointer;
-  height: 0.8px;
-}
-input[type=range]:focus::-ms-fill-lower {
-  background: rgba(0, 0, 0, 0.4);
-}
-input[type=range]:focus::-ms-fill-upper {
-  background: rgba(13, 13, 13, 0.4);
 }

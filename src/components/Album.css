@@ -22,6 +22,7 @@
   width: 100%;
 }
 
+
 #song-number-column {
   width: 40px;
 }
@@ -30,46 +31,46 @@
   width: 80px;
 }
 
-tr {
+
+
+.song {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   background: hsla(0, 0%, 0%, 0.01);
   transition: all 0.2s ease;
 }
 
-tr:focus {
-  outline: aliceblue;
-}
 
-tr:hover .ion-play,
-tr.playing .ion-pause,
-tr.paused .ion-play {
+
+.song:hover .ion-play,
+.song.playing .ion-pause,
+.song.paused .ion-play {
   display: block;
 }
 
-tr .ion-play,
-tr .ion-pause,
-tr:hover .song-number,
-tr.playing .ion-play,
-tr.playing .song-number,
-tr.paused .ion-pause,
-tr.paused .song-number {
+.song .ion-play,
+.song .ion-pause,
+.song:hover .song-number,
+.song.playing .ion-play,
+.song.playing .song-number,
+.song.paused .ion-pause,
+.song.paused .song-number {
   display: none;
 }
 
-tr:hover {
+.song:hover {
   background: hsla(0, 0%, 0%, 0.05);
   cursor: pointer;
 }
 
-tr.playing {
+.song.playing {
   background: hsla(0, 0%, 0%, 0.1);
 }
 
-tr:hover .song-title {
+.song:hover .song-title {
   color: hsla(0, 0%, 100%, 1);
 }
 
-tr:last-child {
+.song:last-child {
   border: none;
 }
 
@@ -78,7 +79,7 @@ td {
 }
 
 
-tr button {
+.song button {
   border: none;
   background: none;
   color: white;
@@ -86,25 +87,25 @@ tr button {
   padding: 0;
 }
 
-tr button:focus {
+.song button:focus {
   outline: none;
   text-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
 }
 
-tr button:focus .song-number {
+.song button:focus .song-number {
   display: none;
 }
 
-tr button:focus .ion-play {
+.song button:focus .ion-play {
   display: block;
 }
 
-tr.playing button:focus .song-number,
-tr.playing button:focus .ion-play {
+.song.playing button:focus .song-number,
+.song.playing button:focus .ion-play {
   display: none;
 }
 
-tr.playing button:focus .ion-pause {
+.song.playing button:focus .ion-pause {
   display: block;
 }
 

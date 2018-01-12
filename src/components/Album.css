@@ -1,6 +1,6 @@
 
 .album {
-  width: 40%;
+  width: 50%;
   margin: 0px auto;
 
 }
@@ -48,18 +48,18 @@
 
 
 .song:hover .ion-play,
-.song.playing .ion-pause,
-.song.paused .ion-play {
+.song#playing .ion-pause,
+.song#paused .ion-play {
   display: block;
 }
 
 .song .ion-play,
 .song .ion-pause,
 .song:hover .song-number,
-.song.playing .ion-play,
-.song.playing .song-number,
-.song.paused .ion-pause,
-.song.paused .song-number {
+.song#playing .ion-play,
+.song#playing .song-number,
+.song#paused .ion-pause,
+.song#paused  .song-number {
   display: none;
 }
 
@@ -68,7 +68,7 @@
   cursor: pointer;
 }
 
-.son.playing {
+.song#playing {
   background: hsla(0, 0%, 0%, 0.1);
 }
 
@@ -106,12 +106,12 @@ td {
   display: block;
 }
 
-.song.playing button:focus .song-number,
-.song.playing button:focus .ion-play {
+.song#playing button:focus .song-number,
+.song#playing button:focus .ion-play {
   display: none;
 }
 
-.song.playing button:focus .ion-pause {
+.song#playing button:focus .ion-pause {
   display: block;
 }
 

@@ -129,7 +129,7 @@ class Album extends Component {
           </colgroup>
           <tbody>
             {this.state.album.songs.map( (song, index) =>
-              <tr className="song" id={(this.state.playing ? 'playing' : 'paused')} key={index} onClick={() => this.handleSongClick(song)} >
+              <tr className={ "song" + (this.state.isPlaying && this.state.currentSong === song ? "playing" : this.state.currentSong === song ? "paused" : )} key={index} onClick={() => this.handleSongClick(song)} >
                 <td className="song-actions">
                   <button>
                     <span className="song-number">{index + 1}</span>

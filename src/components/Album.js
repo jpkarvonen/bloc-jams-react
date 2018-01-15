@@ -109,6 +109,17 @@ class Album extends Component {
     return minutes + ':' + seconds;
   }
 
+  songRowClass(song) {
+    if (song === this.state.currentSong) {
+      if (this.state.isPlaying) {
+        return 'song playing'
+      } else if (!this.state.isPlaying) {
+        return 'song paused';
+      }
+    }
+    return 'song';
+  }
+
 
   render() {
     return (
@@ -129,7 +140,7 @@ class Album extends Component {
           </colgroup>
           <tbody>
             {this.state.album.songs.map( (song, index) =>
-              <tr className={ "song" + (this.state.isPlaying && this.state.currentSong === song ? "playing" : this.state.currentSong === song ? "paused" : )} key={index} onClick={() => this.handleSongClick(song)} >
+              <tr className={this.songRowClass(song)} key={index} onClick={() => this.handleSongClick(song)} >
                 <td className="song-actions">
                   <button>
                     <span className="song-number">{index + 1}</span>
